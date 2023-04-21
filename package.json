@@ -1,0 +1,20 @@
+{
+  "name": "esbuild-plugin-liquid",
+  "version": "0.1.0",
+  "description": "esbuild liquid template file loader so you can import liquid files as strings for your templates",
+  "main": "index.js",
+  "author": "Jay El-Kaake",
+  "license": "MIT",
+  "keywords": [
+    "esbuild",
+    "esbuild plugin",
+    "liquid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jayelkaake/esbuild-plugin-liquid.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
