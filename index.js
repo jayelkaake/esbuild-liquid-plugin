@@ -17,7 +17,4 @@ module.exports = {
             return { contents: JSON.stringify(fs.readFileSync(args.path, {encoding:'utf8', flag:'r'}).trim()), loader: 'json' };
         });
     },
-    "peerDependencies": {
-        "esbuild": ">=0.11.15"
-    },
 };

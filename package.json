@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-liquid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "esbuild liquid template file loader so you can import liquid files as strings for your templates",
   "main": "index.js",
   "author": "Jay El-Kaake",
@@ -16,5 +16,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "esbuild": ">=0.11.15"
   }
 }
