@@ -24,8 +24,6 @@ const liquidPlugin = require('esbuild-plugin-liquid')
 esbuild.build({
   entryPoints: ['src/app.js'],
   outdir: 'dist',
-  bundle: true,
-  minify: true,
   write: false, // write must be false
   plugins: [liquidPlugin()],
 })
