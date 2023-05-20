@@ -43,6 +43,10 @@ import tpl from './hello_world_component.liquid';
 console.log("Liquid template for this component is: ", tpl); // Outputs `<h1>Hello JavaScript World From Liquid!</h1>`
 ```
 
+### Minification
+Liquid will automatically be minified (basically just HTML minification) if the build is set to minify
+with the `--minify` option.
+
 ## License
 
 [MIT](https://opensource.org/license/mit/)

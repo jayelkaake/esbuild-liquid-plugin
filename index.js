@@ -15,9 +15,19 @@ module.exports = {
             }
         );
 
-        build.onLoad({ filter: /.*\.liquid$/, namespace: 'liquid' }, (args) => {
+        build.onLoad({ filter: /.*\.liquid$/, namespace: 'liquid' }, async (args) => {
+            let contents = fs.readFileSync(args.path, {encoding:'utf8', flag:'r'}).trim();
+
+            if (build.initialOptions && build.initialOptions.minify) {
+                contents = contents
+                    .replace(/\>[\r\n ]+\</g, "><")
+                    .replace(/(<.*?>)|\s+/g, (m, $1) => $1 ? $1 : ' ')
+                    .replace(/(-%} \{%-)/, '-%}{%-')
+                    .trim();
+            }
+            
             return {
-                contents: JSON.stringify(fs.readFileSync(args.path, {encoding:'utf8', flag:'r'}).trim()),
+                contents: JSON.stringify(contents),
                 loader: 'json',
                 watchFiles: [args.path],
             };
